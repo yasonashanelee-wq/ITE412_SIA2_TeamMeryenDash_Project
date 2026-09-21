@@ -44,3 +44,5 @@ MeryenDash: Vendor Locator Platform is a proposed digital marketplace designed t
 
 - Channel: MS Teams
 - Meeting cadence: To be decided by the team
+
+Documentation maintained by the project team.
