@@ -57,3 +57,27 @@ The system will initially not include:
 - **Repository/Services:** GitHub
 - **Communication:** MS Teams
 - **Testing Tools:** To be determined based on the development and testing requirements.
+
+## 5. High-Level System Overview
+
+### Major Modules/Subsystems
+
+- **User Account and Profile Management** — Handles customer and vendor account creation, login, and profile information.
+
+- **Vendor Location and Availability Management** — Allows vendors, especially roaming vendors, to share and update their current location and availability status.
+
+- **Nearby Vendor Search and Information** — Allows customers to search for nearby vendors and view vendor information, food/menu details, location, and availability.
+
+- **Customer-to-Vendor Contact** — Allows customers to contact vendors through the platform for inquiries.
+
+### External Systems/Interfaces
+
+- **Map/Location Service** — Provides location and mapping-related data used for vendor location and nearby vendor search.
+
+- **GitHub** — Used as the project repository for storing and managing the system documentation and project files.
+
+### Data Flow Summary
+
+Customers and vendors interact with the MeryenDash platform through their respective account and profile functions. Vendors provide their profile, food/menu information, current location, and availability status. This information is stored and used by the system to provide updated vendor information.
+
+When customers search for nearby vendors, the system uses vendor location and availability information together with the Map/Location Service to identify and display relevant vendors. Customers can view vendor details and contact vendors through the platform.
