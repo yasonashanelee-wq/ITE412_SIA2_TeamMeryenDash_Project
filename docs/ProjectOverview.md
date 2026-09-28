@@ -1,0 +1,118 @@
+# Project Overview
+
+## 1. System Objectives
+
+MeryenDash: Vendor Locator Platform aims to make it easier for customers to find nearby street food vendors, roaming vendors, and small-scale food sellers within their local community.
+
+The system will allow vendors to create and manage their profiles, provide information about their food offerings, share their current location, and update their availability. Customers will be able to search for nearby vendors, view vendor information and location, check availability, and contact vendors.
+
+The project aims to increase vendor visibility and help customers discover local food vendors more quickly and conveniently.
+
+## 2. Proposed Scope
+
+### Modules/Systems to Integrate
+
+The proposed system will include:
+
+- Vendor account creation and login
+- Customer account creation and login
+- Vendor profile management
+- Vendor food/menu information
+- Vendor current location
+- Location updating for roaming vendors
+- Vendor availability status
+- Nearby vendor search
+- Vendor information and location display
+- Customer-to-vendor contact
+
+### In-Scope Features
+
+The system will focus on connecting local food vendors, street food vendors, roaming vendors, and customers within the targeted local community.
+
+Vendors will be able to manage their profiles, provide food information, share their current location, and update their availability. Customers will be able to search for nearby vendors, view vendor details, check availability, and contact vendors.
+
+### Out-of-Scope
+
+The system will initially not include:
+
+- Large restaurants
+- National food delivery services
+- Businesses outside the targeted local community
+
+## 3. Stakeholders
+
+- **Street Food Vendors** — Use MeryenDash to increase their visibility, share their current location, update their availability, and provide information about the food they sell.
+
+- **Customers / Buyers** — Use the platform to search for nearby food vendors, view vendor information and location, check availability, and contact vendors.
+
+- **Roaming Vendors** — Use the platform to update their current location and become easier for customers to discover.
+
+- **System Administrator** — Manage user accounts, vendor information, and other system information to help maintain the platform.
+
+## 4. Tools & Technologies
+
+- **Languages/Frameworks:** To be determined based on the team's development setup.
+- **Integration Approach:** API-based integration for location and mapping services.
+- **External Services:** Map/Location Service for location and map-related data.
+- **Repository/Services:** GitHub
+- **Communication:** MS Teams
+- **Testing Tools:** To be determined based on the development and testing requirements.
+
+## 5. High-Level System Overview
+
+### Major Modules/Subsystems
+
+- **User Account and Profile Management** — Handles customer and vendor account creation, login, and profile information.
+
+- **Vendor Location and Availability Management** — Allows vendors, especially roaming vendors, to share and update their current location and availability status.
+
+- **Nearby Vendor Search and Information** — Allows customers to search for nearby vendors and view vendor information, food/menu details, location, and availability.
+
+- **Customer-to-Vendor Contact** — Allows customers to contact vendors through the platform for inquiries.
+
+### External Systems/Interfaces
+
+- **Map/Location Service** — Provides location and mapping-related data used for vendor location and nearby vendor search.
+
+- **GitHub** — Used as the project repository for storing and managing the system documentation and project files.
+
+### Data Flow Summary
+
+Customers and vendors interact with the MeryenDash platform through their respective account and profile functions. Vendors provide their profile, food/menu information, current location, and availability status. This information is stored and used by the system to provide updated vendor information.
+
+When customers search for nearby vendors, the system uses vendor location and availability information together with the Map/Location Service to identify and display relevant vendors. Customers can view vendor details and contact vendors through the platform.
+
+
+GitHub — Used as the project repository for storing and managing the system documentation and project files **for the project team**.
+
+## Integration Pattern Applied
+
+**Hub-Spoke Integration Pattern**
+
+The system applies the **Hub-Spoke integration pattern**, where the Hub serves as the central point for communication between the different system modules and external services. The User Account and Profile Management, Vendor Location and Availability Management, Nearby Vendor Search and Information, and Customer-to-Vendor Contact modules communicate through the Hub. The Hub also connects with the Database and Map/Location Service to process and exchange the required data.
+
+Integration Pattern Applied: Hub-Spoke Integration Pattern
+
+For Performance Task 7, the system uses REST APIs to integrate two core modules of MeryenDash: Vendor Location and Availability Management and Nearby Vendor Search and Information.
+
+The REST API provides the following endpoints:
+- GET /vendors
+- POST /vendors
+- GET /nearby-vendors
+- POST /nearby-vendors
+
+The API is implemented using Node.js and Express. Dummy in-memory data is used because a database is not required for this activity. The API endpoints were tested successfully using Postman.
+
+## Rationale
+
+The Hub-Spoke pattern was selected because it provides a centralized way of managing communication between the system modules. Instead of allowing each module to communicate directly with every other module, requests are routed through the Hub. This makes the system easier to organize and maintain because the modules have fewer direct dependencies on one another.
+
+For example, user data, vendor data, search data, and contact data are sent to the Hub through API calls. The Hub then communicates with the appropriate service, such as the Database for reading and writing information or the Map/Location Service for location-related data. This approach also makes it easier to add or modify modules in the future without requiring major changes to the other modules.
+
+## Diagram Reference
+
+The high-level architecture diagram showing the Hub-Spoke integration pattern is available in:
+
+`/docs/HighLevelArch.png`
+
+![High-Level Architecture Diagram](HighLevelArch.png)

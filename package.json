@@ -1,0 +1,20 @@
+{
+  "name": "ite412_sia2_teammeryendash_project-main",
+  "version": "1.0.0",
+  "description": "**Course:** ITE412 – System Integration and Architecture 2   **Team Name:** Team MeryenDash   **Repository:** https://github.com/yasonashanelee-wq/ITE412_SIA2_TeamMeryenDash_Project",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
