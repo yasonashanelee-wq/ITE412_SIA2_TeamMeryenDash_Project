@@ -81,3 +81,6 @@ The system will initially not include:
 Customers and vendors interact with the MeryenDash platform through their respective account and profile functions. Vendors provide their profile, food/menu information, current location, and availability status. This information is stored and used by the system to provide updated vendor information.
 
 When customers search for nearby vendors, the system uses vendor location and availability information together with the Map/Location Service to identify and display relevant vendors. Customers can view vendor details and contact vendors through the platform.
+
+
+GitHub — Used as the project repository for storing and managing the system documentation and project files **for the project team**.
