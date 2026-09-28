@@ -84,3 +84,23 @@ When customers search for nearby vendors, the system uses vendor location and av
 
 
 GitHub — Used as the project repository for storing and managing the system documentation and project files **for the project team**.
+
+## Integration Pattern Applied
+
+**Hub-Spoke Integration Pattern**
+
+The system applies the **Hub-Spoke integration pattern**, where the Hub serves as the central point for communication between the different system modules and external services. The User Account and Profile Management, Vendor Location and Availability Management, Nearby Vendor Search and Information, and Customer-to-Vendor Contact modules communicate through the Hub. The Hub also connects with the Database and Map/Location Service to process and exchange the required data.
+
+## Rationale
+
+The Hub-Spoke pattern was selected because it provides a centralized way of managing communication between the system modules. Instead of allowing each module to communicate directly with every other module, requests are routed through the Hub. This makes the system easier to organize and maintain because the modules have fewer direct dependencies on one another.
+
+For example, user data, vendor data, search data, and contact data are sent to the Hub through API calls. The Hub then communicates with the appropriate service, such as the Database for reading and writing information or the Map/Location Service for location-related data. This approach also makes it easier to add or modify modules in the future without requiring major changes to the other modules.
+
+## Diagram Reference
+
+The high-level architecture diagram showing the Hub-Spoke integration pattern is available in:
+
+`/docs/HighLevelArch.png`
+
+![High-Level Architecture Diagram](HighLevelArch.png)
