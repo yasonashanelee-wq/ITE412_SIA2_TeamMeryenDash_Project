@@ -10,6 +10,7 @@
 - Shane Lee Joy Yasoña — Documenter
 - Cedric Del Rosario Escondo — Diagrammer
 - Pablo Jr Agapito — Presenter
+- Vincent Gallardo — Researcher
 
 ## Project Summary
 
