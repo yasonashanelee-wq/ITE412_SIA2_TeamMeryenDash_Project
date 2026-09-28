@@ -52,7 +52,8 @@ The system will initially not include:
 ## 4. Tools & Technologies
 
 - **Languages/Frameworks:** To be determined based on the team's development setup.
-- **Integration Approach:** To be determined based on the systems and services selected for the project.
+- **Integration Approach:** API-based integration for location and mapping services.
+- **External Services:** Map/Location Service for location and map-related data.
 - **Repository/Services:** GitHub
 - **Communication:** MS Teams
 - **Testing Tools:** To be determined based on the development and testing requirements.
